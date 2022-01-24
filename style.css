@@ -1,0 +1,396 @@
+/* RESET HTML */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* INTEGRATION DE LA POLICE MORENA */
+@font-face {
+    font-family: 'morenasemibold';
+    src: url('/assets/webfontkit-20210818-041115/morena-semibold-webfont.woff2'),
+        url('/assets/webfontkit-20210818-041115/morena-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'morenabold';
+    src: url('/assets/webfontkit-20210818-041115/morena-bold-webfont.woff2') format('woff2'),
+        url('/assets/webfontkit-20210818-041115/morena-bold-webfont.woff') format('woff');
+    font-weight: normal, bold, bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'morenalight';
+    src: url('/assets/webfontkit-20210818-041115/morena-light-webfont.woff2') format('woff2'),
+        url('/assets/webfontkit-20210818-041115/morena-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* FEUILLE DE STYLE GENERALE*/
+
+body {
+    background: #214151;
+    font-family: 'morena';
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+/* REDUCTION NAV JS */ 
+.navRaw {
+    display: flex;
+    background: #a2d0c1;
+    font-family: 'morena';
+    position: absolute;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 2.5s 3s ease-out forwards;
+}
+
+.anim-nav{
+    background: #f8dc81;
+    height: 50px;
+    display: none;
+}
+button{
+    margin: 30px 0;
+    background-color: #a2d0c1;
+    border: hidden;
+    text-decoration: none;
+}
+/*ANIMATION DES BOUTONS */
+button{
+    padding: 2rem 7rem;
+    transition: 0.5s all ease-in-out;
+    background: transparent;
+    font-family: morenalight;
+    color:#eff7e1;
+    font-size: 1.5em;
+    letter-spacing: .05rem;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:before{
+    border-top: .3rem solid #214151 hidden;
+    border-bottom: .3rem solid #214151 hidden;
+    display: block;
+    background: transparent;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    right: 100%;
+    transition: .5s all ease-in-out;
+}
+button:hover, .activeMenu{
+    letter-spacing: 0.4rem;
+    border-top: 0.3rem solid #214151;
+    border-bottom: 0.3rem solid #214151;
+    display: block;
+    font-size:1.5rem;
+    font-weight: bolder;
+    color: #214151;
+    top: 0;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+    transform: translateY(2px) scale(0.8);
+}
+
+/* FIN DU CSS BOUTONS */
+nav a {
+    text-decoration: none;
+    font-size: 22px;
+    padding: 0 20px;
+    color: #eff7e1;
+    cursor: pointer;
+}
+
+.home {
+    width: 100%;
+    height: 1vh;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+}
+a>img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: 20%;
+}
+.bloc {
+    width: auto;
+    height: auto;
+    margin-top: 25vh;
+    padding: 20px 20px 130px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.bloc img {
+    position: relative;
+    width: 800px;
+    bottom: 0px;
+    left: 30px;
+    /* Pour avoir accès aux boutons en dessous */
+    pointer-events: none;
+    will-change: transform;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: apparition 0.8s 1s ease-out forwards;
+}
+
+.bloc h1 {
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-items: justify;
+}
+
+.bloc h1 span {
+    display: block;
+    /*pour contourner l'impossibilité de transformer un élément inline*/
+    opacity: 0;
+    transform: translateY(-30px);
+    color: #eff7e1;
+    text-align: center;
+}
+
+/* APPARITIONS DECALEES DES SPAN */
+.bloc h1>span:nth-child(1) {
+    animation: apparition 0.8s 0.3s ease-out forwards;
+}
+
+.bloc h1>span:nth-child(2) {
+    animation: apparition 1s 2s ease-out forwards;
+    font-size: 22px;
+}
+
+.bloc h1>span:nth-child(3) {
+
+    animation: apparition 0.8s 0.9s ease-out forwards;
+}
+
+.bloc p {
+    font-size: 60px;
+    font-weight: bolder;
+    position: relative;
+    color: #a2d0c1;
+    left: 10px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 2s 2.9s ease-out forwards;
+}
+
+/*CONTENEUR BOUTON*/
+.box-btn {
+    margin-top: 100px;
+}
+
+.box-btn button {
+    position: relative;
+    left: 10px;
+    padding: 12px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid gray;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: apparition 0.8s 0.8s ease-out forwards;
+}
+
+/* BOUTONS*/
+.box-btn button:nth-child(1) {
+    margin-right: 5px;
+    background: transparent;
+}
+
+.box-btn button:nth-child(2) {
+    margin-right: 5px;
+    background: #333;
+    color: #f1f1f1;
+}
+
+/* KEYFRAMES APPARITION POUR L ANIMATION */
+@keyframes apparition {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/*METTRE EN PAUSE L ANIMATION UNE FOIS CHARGEE*/
+.loading-anim {
+    animation-play-state: paused !important;
+}
+h3{
+    visibility: hidden;
+}
+.texteDuHaut{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.texteDuHaut>p {
+    margin-left: 11%;
+    margin-right: auto;
+    font-size: 2em;
+    width: 60%;
+    height: 60%;
+    text-align: justify;
+    color: #eff7e1;
+}
+
+img{
+    width: 35%;
+    height: 35%;
+    background-color: #eff7e1;
+    border: #eff7e1 1px solid;
+}
+
+p {
+    padding: 10px;
+    background-color: #214151;
+    color: #eff7e1;
+    border-radius: 20px;
+    font-size: 1.8em;
+}
+
+.texteDuBas{
+    margin: 6%;
+    padding: 10vh;
+}
+
+a{
+    text-decoration: none;
+    color: #eff7e1;
+}
+section{
+    display: block;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 100px;
+}
+.sectionTwo{
+    display: flex;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 100px;
+
+}
+.carteExo{
+    cursor: pointer;
+    height: 300px;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #a2d0c1;
+    position: inherit;
+}
+.faceCard, .backCard{
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+    padding: 10%;
+    margin: 5%;
+    margin-left: 5px;
+    margin-right: 5px;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform 0.6s linear;
+    /*backface cachée, position absolute pour se couvrir dans la div container*/
+}
+
+.faceCard{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: #a2d0c1;
+    color: #214151;
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);/*effet de recul & ne bouge pas sur la verticale*/
+}
+.faceCard>h2{
+    margin-top: 5vh;
+    font-weight: 700;
+    color: black;
+    font-size: 24px;
+    margin-bottom: 2vh;
+    color: #214151;
+}
+.backCard{
+    height: 100%;
+    width: 100%;
+    background: #f8dc81;
+    color: #214151;
+    text-align: center;
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);/*effet de recul & ne bouge pas sur la verticale*/
+}
+
+.contenu{
+    display: flex;
+    flex-direction: column;
+    color: #214151;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+}
+.contenu>a>h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: #214151;
+}
+.contenu>a>p{
+
+    font-size: 18px;
+    text-align: center justify;
+}
+
+
+.carteExo:hover .faceCard{
+    transform: perspective(600px) rotateY(-180deg);
+}
+.carteExo:hover .backCard{
+    transform: perspective(600px) rotateY(0deg);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

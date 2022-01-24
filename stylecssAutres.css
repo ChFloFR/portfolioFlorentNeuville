@@ -1,0 +1,320 @@
+/* RESET HTML */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    background: #214151;
+    font-family: 'morena';
+    letter-spacing: 1px;
+    justify-content: space-around ;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #eff7e1;
+}
+/* INTEGRATION DE LA POLICE MORENA */
+@font-face {
+    font-family: 'morenasemibold';
+    src: url('/assets/webfontkit-20210818-041115/morena-semibold-webfont.woff2'),
+        url('/assets/webfontkit-20210818-041115/morena-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'morenabold';
+    src: url('/assets/webfontkit-20210818-041115/morena-bold-webfont.woff2') format('woff2'),
+        url('/assets/webfontkit-20210818-041115/morena-bold-webfont.woff') format('woff');
+    font-weight: normal, bold, bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'morenalight';
+    src: url('/assets/webfontkit-20210818-041115/morena-light-webfont.woff2') format('woff2'),
+        url('/assets/webfontkit-20210818-041115/morena-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+header{
+    display: inline-flex;
+    font-size: 6vh;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 80%;
+    padding: 10px;
+    margin: 10vh;
+    text-decoration:underline;
+}
+
+h1{
+    margin-right: 10vh;
+    font-size: 1em;
+    text-align: center;
+}
+img{
+    width: 50%;
+    height: 50%;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff7e1;
+    border-radius: 1.2rem;
+    padding: 0.1em;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+.textAccueil{
+    justify-content: center;
+    align-items: center;
+    text-align: center justify;
+    font-size: 2rem;
+    padding: 5vh;
+}
+
+.Exo{
+    display: flex;
+    justify-content: center;
+    background: #214151;
+}
+.boiteLangage{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1vh;
+    align-items: center;
+    margin: 5vh;
+    background: #214151;
+}
+
+h3{
+    display: flex;
+    width: auto;
+    height: 90%;
+    justify-content: center space-around;
+    align-items: center;
+    padding: 5vh;
+    color: #214151;
+    background: #eff7e1;
+    margin: 1vh;
+}
+.twoLinesUnder{
+    font-size: 40px;
+    text-decoration: none;
+    position: relative;
+    color: #214151;
+
+}
+.twoLinesUnder::before,
+.twoLinesUnder::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #214151;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    transition: all 0.4s ease-in-out;
+}
+/* TAILLE et POSITION DES LIGNES */
+.twoLinesUnder::before{
+    width: 90%;
+    bottom: 0;
+}
+.twoLinesUnder::after{
+    width: 60%;
+    bottom: -7px;
+}
+/* APPARITION DES LIGNES */
+.twoLinesUnder:hover::before,
+.twoLinesUnder:hover::after{
+    opacity: 1;
+    transform: translate(-50%,0px);
+}
+/* DELAI DIFFERENTS POUR CHAQUE LIGNE AU HOVER */
+.twoLinesUnder::before,
+.twoLinesUnder:hover::after{
+    transition-delay: 0.15s;
+}
+.twoLinesUnder:hover::before{
+    transition-delay: 0s;
+}
+
+/* REGLES RESPONSIVE */
+
+/* REGLES RESPONSIVE */
+@media  screen and (min-width: 800px) and (max-width: 1279px) {
+    body{
+        block-size: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        
+    }
+    header{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        width: 250px;
+        height: 150px;
+        margin-top: 5vh;
+        margin-left: 24vw;
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #eff7e1;
+        border-radius: 1.2rem;
+        margin-left: 15vw;
+    }
+    h2{
+        font-size: 0.9em;
+    }
+    .Exo{
+        display: flex;
+        width: 100% !important;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .boiteLangage{
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    h3{
+        font-size: 12px;
+        padding: 2em;
+    }
+    .twoLinesUnder{
+        display: flex;
+        margin: 0;
+    }
+    .section{
+        margin: auto;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    .Exo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/* PETITS ECRANS 
+@media only screen and (max-width: 480px)
+ */
+/*SMARTPHONES & PETITES TABLETTES EN PORTRAIT*/ 
+@media only screen and (max-width: 768px){
+    body{
+        width: 100%;
+        height: auto;
+    }
+    .textAccueil{
+        padding: 0;
+    }
+    .textAccueil>h2 {
+        font-size: 1.1em;
+        word-break: normal;
+        text-align: justify;
+        margin: 1vw;
+        padding-right:2vw; 
+        }
+        .textAccueil>p{
+            font-size: 0.8em;
+            padding: 4vw;
+            padding-right: 6vw;
+            padding-left: 0;
+            text-align:justify ;
+        }
+        .Exo{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8vw;
+        }
+        h3{
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+            /* margin-right: 3vw; */
+            justify-content: center;
+        }
+
+        .boiteLangage{
+            width: 100% !important;
+        }
+
+}
+
+/* TABLETTES MOYENNES  */
+@media only screen and (max-width: 480px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.9em;
+        align-items: center;
+        margin-left: 40vw;
+    }
+    h1{
+        margin-bottom: 3vh;
+    }
+    header>a{
+        margin-right: 20vw;
+    }
+    .textAccueil>h2 {
+    font-size: 0.9em;
+    word-break: normal;
+    text-align: justify;
+    margin: 1vw;
+    padding-left: 6vw; 
+    }
+    .textAccueil>p{
+        font-size: 0.8em;
+        padding: 4vw;
+        padding-left: 6vw;
+        text-align:justify ;
+    }
+    .Exo{
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    .boiteLangage{
+        width: 90%;
+    }
+
+
+}

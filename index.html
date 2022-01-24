@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florent Neuville - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mainMedia.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navRaw" class="anim-nav">
+            <button data-href="#top">Bienvenue</button>
+            <button data-href ="#texteDuBas">Présentation</button>
+            <button data-href ="#sectionTwo">Apprentissages et réalisations</button>
+
+            <button class="onlyIt" data-href="/contact.html">Contact</button>
+        </nav>
+        <div class="home">
+            <div class="bloc">
+                <h1>
+                    <span>Florent NEUVILLE</span>
+                    <span>(veut devenir)</span>
+                    <span>Développeur web</span>
+                </h1>
+                <p>recherche un stage !</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <hr>
+        <section>
+            <h3>Courte Présentation</h3>
+            <div class="texteDuHaut" id="texteDuHaut">
+                <p>Bonjour, naviguez et cliquez sur mes travaux pour en savoir plus :-)<br>C'est par <a href="#sectionTwo">ici</a></p>
+                <a href="https://www.linkedin.com/in/florent-neuville/" target="_blank"><img src="/assets/img/58e91afdeb97430e81906504.png" alt="iconelinkedin" width="30px" height="30px"/></a>
+            </div>
+            <div class="texteDuBas" id="texteDuBas">
+                <p>
+                Développeur web en devenir<strong> <br> Je suis en recherche d'un stage pour conclure et valider</strong> le titre RNCP Développeur Web et Web mobile .<br>Contactez-moi quelle que soit la question que vous vous posez, ce serait dommage de se rater !</p>
+                <p>Je suis quelqu'un de souriant, qui aime rire et <strong>travailler</strong> dans la bonne humeur !</p>
+            </div>
+        </section>
+        <section class="sectionTwo" id="sectionTwo">
+            <div class="carteExo">
+                <div class="faceCard">
+                    <h2>HTML & CSS</h2>
+                </div>
+                <div class="backCard">
+                    <div class="contenu">
+                        <a href="/pageExo.html">
+                        <h2>Les exercices</h2>
+                            <p>Uniquement des exercices concernant ces deux langages</p></a>
+                        </div>
+                    </div>
+            </div>
+            <div class="carteExo">
+                <div class="faceCard">
+                    <h2>Javascript</h2>
+                </div>
+                <div class="backCard">
+                    <div class="contenu">
+                        <a href="/pageAutresExos.html">
+                        <h2>Les exercices</h2>
+                        <p>Devinez ?</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="carteExo">
+                <div class="faceCard">
+                    <h2>Outils Adobe</h2>
+                </div>
+                <div class="backCard">
+                    <div class="contenu">
+                        <a href="/adobepage.html">
+                        <h2>Les exercices</h2>
+                        <p>Le travail avec Photoshop, InDesign, Illustrator</p></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- <?php
+    include "template/footer.php";
+    ?> -->
+    
+    <footer>
+        <p>Tous droits réservés - Florent Neuville - Août 2021</p>
+</footer>
+
+<script src="/assets/script.js"></script>
+</body>
+</html>

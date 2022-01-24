@@ -1,0 +1,142 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 1.2em;
+    background: #a2d0c1;
+    align-items: center;
+    color: #214151;
+}
+
+header{
+    display: flex;
+    font-size: 4vh;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 80%;
+    padding: 10px;
+    margin: 6vh;
+    text-decoration:underline;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    /* width: 25%; */
+    flex-wrap: wrap;
+}
+.conteneurTravaux {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    width: auto;
+    height: auto;
+}
+/* Aspects des liens*/
+a {
+    color: #a2d0c1;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #a2d0c1;
+}
+
+a:hover{ 
+    color: #214151;
+    transition: 0.5s;
+}
+
+.boiteExo {
+    display: flex;
+    width:50%;
+    height:auto;
+    margin: 3em;
+    padding: 2em 2em 2em 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    color: #f8dc81;
+    background-color: #214151;
+    opacity: 0.9;
+    border-radius: 70px;
+    transition-property: background, border-radius, box-shadow;
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+}
+.boiteExo>p {
+    display: flex;
+    flex-direction:row;
+    color: #eff7e1;
+    margin: 1em;
+}
+/*transition conteneur des exos {div boiteExo}*/
+
+.boiteExo:hover{
+    animation: ease-in-out 5s infinite linear;
+    background-color: #f8dc81;
+    color: #214151;
+    box-shadow: 0px 0px 400px 0px #eff7e1 inset;
+    -webkit-box-shadow:0px 0px 400px -10px #f8dc81 inset;
+    -moz-box-shadow:0px 0px 400px -10px #f8dc81 inset;
+    transition: 1.5s all ease;
+    box-shadow: 2px 2px 0px 10PX #eff7e1 offset;
+    border-radius: 100px;
+
+}
+.boiteExo:hover>a{
+    color: #214151;
+    transition: 0.5s;
+}
+.boiteExo:hover>p{
+    color: #214151;
+    transition: 0.5s;
+}
+/* REGLES RESPONSIVE */
+@media  screen and (min-width: 967px) and (max-width: 1279px) {
+    body{
+        width: 100%;
+        height: auto;
+        block-size: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+ 
+
+}
+/* PETITS ECRANS 
+@media only screen and (max-width: 480px)
+ */
+/*SMARTPHONES & PETITES TABLETTES EN PORTRAIT*/ 
+@media only screen and (min-width: 800px) and (max-width: 966px){
+    body{
+        width: 100%;
+        height: auto;
+    }
+
+
+}
+
+/* TABLETTES MOYENNES  */
+@media only screen and (max-width: 480px) {
+    body{
+        width: 100%;
+        height: auto;
+    }
+
+
+
+}

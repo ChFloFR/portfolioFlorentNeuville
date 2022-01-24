@@ -1,0 +1,158 @@
+
+    @media screen and (min-width: 1024px){
+/* NAVIGATION */
+        .navRaw{
+            color: white;
+        }
+        button{
+            color: white;
+            text-align: center;
+        }
+/* PARAGRAPHE */
+        .texteDuHaut{
+            margin-left: 1%;
+        }
+/* BLOCS EXOS */
+        .sectionTwo{
+            justify-content: space-around;
+            padding-left: 15%;
+        }
+/* pageExo RESPONSIVE RULES */
+        .textAccueil{
+            width: 100%;
+            height: auto;
+            text-align: justify;
+            padding-left: 15em;
+            padding-right: 15em;
+        }
+        .boiteLangage{
+            width: 40%;
+            flex-wrap: wrap;
+            height: auto;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+/* NAVIGATION */
+        .navRaw{
+            color: white;
+            align-items: stretch;
+            padding-right: 6em;
+        }
+        button{
+            font-size: 12px;
+            margin-left: 2%;
+            padding: 3%;
+            margin-bottom: 5px;
+            overflow: clip;
+        }
+        button:hover{
+            font-size: 14px;
+            text-align: center;
+            justify-content: center;
+        }
+        .bloc{
+            width: 100%;
+            height: auto;
+        }
+        .bloc>p{
+            text-align: center;
+            font-size: 2.9em;
+        }
+        .texteDuHaut{
+            flex-direction: column;
+        }
+        .texteDuHaut>p{
+            width: 60%;
+            margin-left: 15%;
+            margin-bottom: 3em;
+            font-size: 1.5em;
+        }
+        .sectionTwo{
+            justify-content: space-around;
+            padding-left: 25%;
+        }
+        .sectionTwo{
+            padding: 1em;
+        }
+        .carteExo{
+            height: 225px;
+            width:175px;
+            left: 13%;
+            position: relative;
+        }
+        .contenu>a>h2{
+            font-size: 20px;
+        }
+        .contenu>a>p{
+            font-size: 14px;
+        }
+        footer>p{
+            font-size: 1.2em;
+            text-align: center;
+        }
+    }
+    /* @media screen and (max-width: 768px){
+
+        .carteExo{
+            width: 30%;
+        }
+        .backCard{
+            visibility: hidden;
+        }
+        .navRaw{
+            display: grid;
+            height: 20vh;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            font-size: 14px;
+            padding: 2%;
+        }
+        button{
+            height: 20%;
+            color: black;
+            font-size: medium;
+        }
+        } */
+        
+    @media screen and (max-width:600px) {
+        .navRaw{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 20vh;
+            /* color: white; */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            position: initial;
+        }
+        button{
+            height:min-content;
+            font-weight: bolder;
+            color: white;
+            font-size: 18px;
+            margin: 0;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            padding: 0;
+        }
+        .texteDuBas{
+            width: 100;
+            padding: 0;
+            margin: 4vw;
+            text-align: justify;
+        }
+        .texteDuHaut p{
+            width: 100%;
+            text-align: justify;
+            margin: 4vw;
+            /* margin-left: 1vw;
+            margin-right: 1vw; */ */
+            /* border-radius: 0;
+        }
+    }
+
+
